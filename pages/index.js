@@ -17,7 +17,7 @@ export default function Home({ posts }) {
       <main>
         <Header />
         <div className="posts">
-          {posts.map((p) => {
+          {posts?.map((p) => {
             return <Post key={p.date} date={p.date} image={p.image.fields}  title={p.title} />
           })}
         </div>
@@ -67,14 +67,18 @@ export default function Home({ posts }) {
 
 export async function getStaticProps() {
   const res = await fetchEntries();
-  console.log(res);
-  const posts = await res.map((p) => {
-    return p.fields
-  })
-
+  if(res){
+    const posts = await res.map((p) => {
+      return p.fields
+    })
+  
+    return {
+      props: {
+        posts,
+      },
+    }
+  }
   return {
-    props: {
-      posts,
-    },
+    props: {},
   }
 }
