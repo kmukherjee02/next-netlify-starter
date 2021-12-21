@@ -25,3 +25,7 @@ yarn dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+
+
+[Netlify Site](https://serene-clarke-d1f0a7.netlify.app/)
+[Vercel Site](https://next-netlify-starter-one.vercel.app/)
