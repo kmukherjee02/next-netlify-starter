@@ -16,6 +16,7 @@ export default function Home({ posts }) {
 
       <main>
         <Header />
+        <h1>Hello World!</h1>
         <div className="posts">
           {posts?.map((p) => {
             return <Post key={p.date} date={p.date} image={p.image.fields}  title={p.title} />
